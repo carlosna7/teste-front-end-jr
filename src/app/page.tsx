@@ -1,95 +1,135 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import style from "./page.module.scss";
+import Header from "@/components/layout/Header";
+import Footer from "@/components/layout/Footer";
+import PhoneSwiper from "@/components/phoneSwiper/PhoneSwiper";
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <>
+      <main className={style.main}>
+        <Header />
+
+        <section className={style.banner}>
+          <div>
+            <h1>Venha conhecer nossas promoções</h1>
+            <h2>50% Off nos produtos</h2>
+            <button>Ver produto</button>
+          </div>
+        </section>
+
+        <section className={style.filter}>
+          <div>
+            <div>
+              <div><img src="monitorar-tablet-e-smartohoneImg.png" alt="" /></div>
+              <p>Tecnologia</p>
+            </div>
+            <div>
+              <div><img src="supermercadosImg.png" alt="" /></div>
+              <p>Supermercado</p>
+            </div>
+            <div>
+              <div><img src="whiskeyImg.png" alt="" /></div>
+              <p>Bebidas</p>
+            </div>
+            <div>
+              <div><img src="ferramentasImg.png" alt="" /></div>
+              <p>Ferramentas</p>
+            </div>
+            <div>
+              <div><img src="cuidados-de-saudeImg.png" alt="" /></div>
+              <p>Saúde</p>
+            </div>
+            <div>
+              <div><img src="corridaImg.png" alt="" /></div>
+              <p>Esportes e fitness</p>
+            </div>
+            <div>
+              <div><img src="modaImg.png" alt="" /></div>
+              <p>Moda</p>
+            </div>
+          </div>
+
+          <section>
+            <div>
+              <div>
+                <p>CELULAR</p>
+              </div>
+              <div>
+                <p>ACESSÓRIOS</p>
+              </div>
+              <div>
+                <p>TABLETS</p>
+              </div>
+              <div>
+                <p>NOTEBOOKS</p>
+              </div>
+              <div>
+                <p>TVS</p>
+              </div>
+              <div>
+                <p>VER TODOS</p>
+              </div>
+            </div>
+          </section>
+        </section>
+
+        <PhoneSwiper />
+
+        <section className={style.parceiros}>
+          <div>
+            <h2>Parceiros</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor cum pariatur et harum reiciendis totam dolorum quod laborum nemo.</p>
+            <button>CONFIRA</button>
+          </div>
+          <div>
+            <h2>Parceiros</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor cum pariatur et harum reiciendis totam dolorum quod laborum nemo.</p>
+            <button>CONFIRA</button>
+          </div>
+        </section>
+
+        <div className={style.sectionTitle1}>
         </div>
-      </div>
 
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+        <section className={style.produtos}>
+          <div>
+            <h2>Produtos</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor cum pariatur et harum reiciendis totam dolorum quod laborum nemo.</p>
+            <button>CONFIRA</button>
+          </div>
+          <div>
+            <h2>Produtos</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor cum pariatur et harum reiciendis totam dolorum quod laborum nemo.</p>
+            <button>CONFIRA</button>
+          </div>
+        </section>
 
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
+        <div className={style.sectionTitle2}>
+          <h1>Navegue por marcas</h1>
+        </div>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
+        <section className={style.navBrands}>
+          <div>
+            <div>
+              <img src="logo.png" alt="" />
+            </div>
+            <div>
+              <img src="logo.png" alt="" />
+            </div>
+            <div>
+              <img src="logo.png" alt="" />
+            </div>
+            <div>
+              <img src="logo.png" alt="" />
+            </div>
+            <div>
+              <img src="logo.png" alt="" />
+            </div>
+          </div>
+        </section>
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+        <Footer />
+      </main>
+    </>
   );
 }
